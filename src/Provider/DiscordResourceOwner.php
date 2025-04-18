@@ -99,6 +99,26 @@ class DiscordResourceOwner implements ResourceOwnerInterface
     }
 
     /**
+     * Get resource owner locale
+     *
+     * @return string|null
+     */
+    public function getLocale()
+    {
+        return $this->getValueByKey($this->response, 'locale');
+    }
+
+    /**
+     * Get resource owner global name
+     *
+     * @return string|null
+     */
+    public function getGlobalName()
+    {
+        return $this->getValueByKey($this->response, 'global_name');
+    }
+
+    /**
      * Returns the raw resource owner response.
      *
      * @return array
